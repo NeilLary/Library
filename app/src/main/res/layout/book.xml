@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+<android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/CustomToolbarStyle">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/booktoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        />
+</android.support.design.widget.AppBarLayout>
+
+
+
+<android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="0dp"
+>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/editText1"
+                        android:layout_width="328dp"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="40dp"
+
+
+                        android:layout_marginTop="40dp"
+                        android:ems="10"
+                        android:hint="@string/book_name"
+                        android:inputType="textLongMessage"
+                        android:textColor="#61000000"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/Spinner1"
+                        android:layout_width="328dp"
+                        android:layout_height="48dp" />
+
+                    <EditText
+                        android:id="@+id/editText2"
+                        android:layout_width="328dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="40dp"
+                        android:ems="10"
+                        android:hint="@string/isbn_num"
+                        android:inputType="number"
+                        android:textColor="#61000000"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editText3"
+                        android:layout_width="328dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="65dp"
+                        android:ems="10"
+                        android:hint="@string/cntnt_desc"
+                        android:inputType="textImeMultiLine"
+                        android:textColor="#61000000"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignStart="@+id/editText3"
+                        android:layout_marginTop="133dp"
+                        android:background="#6379f6"
+                        android:text="@string/save_book"
+                        android:textColor="#ffff"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
